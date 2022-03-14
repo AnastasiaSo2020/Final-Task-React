@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import '../Components/main.css'
+import { Link, NavLink } from "react-router-dom"
+import '../CSS/main.css'
 
 function Header() {
     return (
@@ -7,7 +7,7 @@ function Header() {
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container">
                     <Link className="navbar-brand" to="/">
-                        <img className="mx-4" src="/logo-image/LOGO.png" height="110" className="d-inline-block align-top"/>
+                        <img className="mx-4 d-inline-block align-top" src="/logo-image/LOGO.png" height="110" />
                     </Link>
                     <button
                         className="navbar-toggler"
@@ -23,28 +23,28 @@ function Header() {
                     <div className="collapse navbar-collapse navbar-text-location">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">HOME</Link>
+                                <NavLink className={({ isActive }) => isActive ? "nav-link nav-link-active" : "nav-link" } to="/">HOME</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/workshops">WORKSHOPS</Link>
+                               < NavLink className={({ isActive }) => isActive ? "nav-link nav-link-active" : "nav-link" } to="/workshops">WORKSHOPS</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/shop">SHOP</Link>
+                                <NavLink className={({ isActive }) => isActive ? "nav-link nav-link-active" : "nav-link" } to="/shop">SHOP</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/register">REGISTER</Link>
+                                <NavLink className={({ isActive }) => isActive ? "nav-link nav-link-active" : "nav-link" } to="/register">REGISTER</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/chat">CHAT</Link>
+                                <NavLink className={({ isActive }) => isActive ? "nav-link nav-link-active" : "nav-link" } to="/chat">CHAT</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about">ABOUT</Link>
+                                <NavLink className={({ isActive }) => isActive ? "nav-link nav-link-active" : "nav-link" } to="/about">ABOUT</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/contact">CONTACT</Link>
+                                <NavLink className={({ isActive }) => isActive ? "nav-link nav-link-active" : "nav-link" } to="/contact">CONTACT</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/cart">CART</Link>
+                                <NavLink className={({ isActive }) => isActive ? "nav-link nav-link-active" : "nav-link" } to="/cart">CART</NavLink>
                             </li>
                         </ul>
                     </div>
@@ -52,7 +52,6 @@ function Header() {
             </nav>
         </div>
     )
-
 }
 
-export default Header;
+export default Header

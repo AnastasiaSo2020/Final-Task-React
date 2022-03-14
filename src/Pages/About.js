@@ -1,4 +1,4 @@
-import '../Components/main.css'
+import '../CSS/main.css'
 
 function About() {
   return (
@@ -38,7 +38,7 @@ function About() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default About

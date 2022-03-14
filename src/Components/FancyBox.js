@@ -1,9 +1,8 @@
-import '../Components/main.css'
+import '../CSS/main.css'
 
 function FancyBox(props) {
     return (
         <div className="row">
-
             <div className="col-5">
                 <div className="row">
                     <div className="col-6">
@@ -47,7 +46,6 @@ function FancyBox(props) {
                     <img src={props.imagefolder + "main.png"} className="fancyboxPastaImage" />
                 </a>
             </div>
-
         </div>
     )
 }

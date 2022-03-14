@@ -21,8 +21,7 @@ function getWorkshopCard() {
             image: '/workshops-images/personal-training/',
             price: 320,
         },
-
-    ];
+    ]
 }
 
 export default getWorkshopCard

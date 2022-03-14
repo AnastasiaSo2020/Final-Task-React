@@ -1,7 +1,7 @@
-import { useState } from "react";
-import CartQuantity from "./CartQuantity";
-import '../Components/main.css'
-import FancyBox from "./FancyBox";
+import { useState } from "react"
+import CartQuantity from "./CartQuantity"
+import '../CSS/main.css'
+import FancyBox from "./FancyBox"
 
 function ProductCard(props) {
 
@@ -12,7 +12,6 @@ function ProductCard(props) {
     {
         props.AddToCart({title:title, price:price, quantity:quantity, image:image})
     }
-
     return (
         <div className="row productCardRowAppearance">
             <div className="col-6 productCardColAppearance">
@@ -31,7 +30,7 @@ function ProductCard(props) {
                 </span>
             </div>
         </div>
-    );
+    )
 }
 
 export default ProductCard

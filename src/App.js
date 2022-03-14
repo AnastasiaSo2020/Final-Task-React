@@ -1,37 +1,34 @@
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import Home from "./Pages/Home";
-import { Route, Routes } from "react-router-dom";
-import Workshops from "./Pages/Workshops";
-import Shop from "./Pages/Shop";
-import Register from "./Pages/Register";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-import Cart from "./Pages/Cart";
-import { useState } from "react";
-import Chat from "./Pages/Chat";
-import TermsAndConditions from "./Pages/TermsAndConditions";
+import Footer from "./Components/Footer"
+import Header from "./Components/Header"
+import Home from "./Pages/Home"
+import { Route, Routes } from "react-router-dom"
+import Workshops from "./Pages/Workshops"
+import Shop from "./Pages/Shop"
+import Register from "./Pages/Register"
+import About from "./Pages/About"
+import Contact from "./Pages/Contact"
+import Cart from "./Pages/Cart"
+import { useState } from "react"
+import Chat from "./Pages/Chat"
+import TermsAndConditions from "./Pages/TermsAndConditions"
 
 function App() {
   const [cart, setCart] = useState([])
-
   function AddToCart(data) {
-    let existing = cart.find(c => c.title === data.title);
+    let existing = cart.find(c => c.title === data.title)
     if (!existing) {
-      cart.push(data);
+      cart.push(data)
     }
     else {
-      existing.quantity = data.quantity;
+      existing.quantity = data.quantity
     }
-    setCart(cart);
+    setCart(cart)
   }
-
 function RemoveFromCart(title)
 {
-  let filter = cart.filter(index => index.title !== title);
-  setCart(filter);
+  let filter = cart.filter(index => index.title !== title)
+  setCart(filter)
 }
-
   return (
     <div>
       <Header />
@@ -44,11 +41,11 @@ function RemoveFromCart(title)
         <Route path="/about" element={<About />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/termsandconditons" element={<TermsAndConditions />} />
+        <Route path="/termsandconditions" element={<TermsAndConditions />} />
       </Routes>
       <Footer />
     </div>
-  );
+  )
 }
 
 export default App

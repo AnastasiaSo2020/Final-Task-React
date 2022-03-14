@@ -1,5 +1,4 @@
 /* About */
-
 .image-about {
     padding: 20px;
     width: 100%;
@@ -19,7 +18,6 @@
 }
 
 /* CardHome */
-
 .image-size {
     width: 300px;
     border-radius: 50%;
@@ -38,9 +36,11 @@
     color: gold;
 }
 
+.centeredBtn {
+    width: 100%;
+}
 
 /* CardHomePage */
-
 .cardHomePage-card-location {
     margin-top: 50px;
 }
@@ -53,6 +53,11 @@
 .tabsAppearance {
     background-color: gold !important;
     color: black;
+}
+
+.cartBuyBtn {
+    margin-left: 900px;
+    width: 350px;
 }
 
 /* CartQuantity */
@@ -190,17 +195,21 @@ textarea {
 .nav-link {
     font-size: larger;
     font-size: larger;
-    margin: 2rem;
-  }
+    margin: 1.5rem;
+}
 
-  .navbar-text-location {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-  }
+.nav-link-active {
+   text-decoration: underline;
+}
 
-  /* Home */
-  .mainHomePhrase {
+.navbar-text-location {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Home */
+.mainHomePhrase {
     font-family: 'Cormorant Garamond', serif;
     color: gold;
     text-align: center;
@@ -272,6 +281,10 @@ textarea {
     padding-top: 20px;
 }
 
+.input {
+    width: 200px;
+}
+
 .registerError {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !;
     color: red;
@@ -286,6 +299,14 @@ textarea {
     font-weight: 900;
     font-style: normal !important;
     padding: 5px;  
+}
+
+.tcAppearance {
+    color: gold;
+}
+
+.registerTermsAndConditions {
+    padding: 20px;
 }
 
 /* SocialFollow */
@@ -304,6 +325,32 @@ a.social {
 a.social:hover {
     transform: translateY(-2px);
   }
+
+/* TermsAndConditions */
+.separateTCTable {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.imgLogo {
+    width: 100px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.TC {
+    padding: 20px;
+    font-weight: 700;
+}
+
+.description {
+    font-size: large;
+    font-weight: 700;
+}
 
   /* WorkshopCard */
 .workshopCardOneRow {
@@ -347,4 +394,3 @@ a.social:hover {
     padding-left: 20px;
     padding-top: 20px !important;
 }
-

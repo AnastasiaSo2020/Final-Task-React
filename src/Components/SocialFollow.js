@@ -1,13 +1,12 @@
-import React from "react";
-import '../Components/main.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react"
+import '../CSS/main.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faYoutube,
   faFacebook,
   faTwitter,
   faInstagram
-} from "@fortawesome/free-brands-svg-icons";
-
+} from "@fortawesome/free-brands-svg-icons"
 
 function SocialFollow() {
   return (
