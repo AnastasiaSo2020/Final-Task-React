@@ -7,6 +7,7 @@ export default function RegisterForm() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [retypedPassword, setRetypedPassword] = useState('');
 
     // States for checking the errors
     const [submitted, setSubmitted] = useState(false);
@@ -30,10 +31,16 @@ export default function RegisterForm() {
         setSubmitted(false);
     };
 
+    // Handling the password change
+    const handleRetypedPassword = (e) => {
+        setRetypedPassword(e.target.value);
+        setSubmitted(false);
+    };
+
     // Handling the form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (name === '' || email === '' || password === '') {
+        if (name === '' || email === '' || password === '' || retypedPassword === '') {
             setError(true);
         } else {
             setSubmitted(true);
@@ -80,21 +87,30 @@ export default function RegisterForm() {
                     {successMessage()}
                 </div>
 
-                <form>
+                <form onSubmit={handleSubmit}>
                     {/* Labels and inputs for form data */}
                     <label className="registerFormLabel">Name</label>
                     <input onChange={handleName} className="input"
-                        value={name} type="text" />
+                        value={name} type="text" required />
 
                     <label className="registerFormLabel">Email</label>
                     <input onChange={handleEmail} className="input"
-                        value={email} type="email" />
+                        value={email} type="email" required />
 
                     <label className="registerFormLabel">Password</label>
                     <input onChange={handlePassword} className="input"
-                        value={password} type="password"/>
+                        value={password} type="password" required minLength="8" />
 
-                    <button onClick={handleSubmit} className="btn btn-warning registerButton" type="submit">
+
+                    <label className="registerFormLabel">Retyped Password</label>
+                    <input onChange={handleRetypedPassword} className="input"
+                        value={retypedPassword} type="password" required minLength="8" />
+
+                    <div className="termsAndConditions">
+                        <input type="checkbox" id="termsAndConditions" required />
+                        <a href="termsandconditions">Agree with terms and conditions*</a>
+                    </div>
+                    <button className="btn btn-warning registerButton" type="submit">
                         SUBMIT
                     </button>
                 </form>

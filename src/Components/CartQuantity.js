@@ -1,6 +1,4 @@
-
 import '../Components/main.css'
-
 
 function CartQuantity(props) {
 

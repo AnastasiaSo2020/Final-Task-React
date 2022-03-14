@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact";
 import Cart from "./Pages/Cart";
 import { useState } from "react";
 import Chat from "./Pages/Chat";
+import TermsAndConditions from "./Pages/TermsAndConditions";
 
 function App() {
   const [cart, setCart] = useState([])
@@ -43,6 +44,7 @@ function RemoveFromCart(title)
         <Route path="/about" element={<About />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/termsandconditons" element={<TermsAndConditions />} />
       </Routes>
       <Footer />
     </div>

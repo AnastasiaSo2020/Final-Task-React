@@ -18,7 +18,6 @@
     padding: 40px;
 }
 
-
 /* CardHome */
 
 .image-size {
@@ -59,6 +58,73 @@
 /* CartQuantity */
 .cart-input-field {
     margin: 5px;
+}
+
+/* Chat */
+.chatSubTitleAppearance {
+    font-weight: 900 !important;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    color: gold;
+}
+
+.chatArea {
+    height: 700px; 
+    width: 100%;
+    border: 5px solid gold;
+}
+
+.firstPartofChat {
+    height: 70%; 
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.chatBox {
+    padding: 5px;
+}
+
+.secondPartofChat {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#comment {
+    width: 900px;
+    height: 100px;
+}
+
+.btnBox {
+    padding-left: 30px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.btn {
+    max-width: 100%;
+    margin-right: 100px;
+}
+
+.responsive-width {
+    max-width: 300px;
+    min-width: 100px;
+}
+
+.nameDateTime {
+    display: inline-flex;
+}
+
+.chatTime {
+    padding-left: 10px;
+}
+
+textarea {
+    max-width: 100%;
+    padding-bottom: 15px;
 }
 
 /* Contact */
