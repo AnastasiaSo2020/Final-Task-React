@@ -37,7 +37,7 @@ function CartAddress(props) {
         </div>
         <div className="row px-5">
           <div className="col-md-12 d-flex justify-content-end">
-            <button className="btn btn-warning">Add Addresses</button>
+            <button className="btn btn-warning"><strong>Add Addresses</strong></button>
           </div>
         </div>
       </form>

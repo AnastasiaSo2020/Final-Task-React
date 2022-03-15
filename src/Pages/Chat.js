@@ -1,7 +1,7 @@
 import { useState } from "react"
 function Chat() {
 
-  const [messages, setMessages] = useState([{ user: 'Robby (bot)', time: new Date(), message: 'Hello, my name is Robby. Do you want to make your first order?' }])
+  const [messages, setMessages] = useState([{ user: 'Robby (bot)', time: new Date(), message: 'Hello, my name is Robby. Do you want to make your first order? (Please answer - Yes / No)' }])
 
   function SubmitMessage(e) {
     e.preventDefault();
@@ -15,7 +15,7 @@ function Chat() {
     let lastMessage = allMessages[0].message
     let answer = ''
     switch (lastMessage) {
-      case "Yes": answer = "Please choose between Workshops and Pasta Products :)"; break
+      case "Yes": answer = "Please choose between Workshops and Pasta Products (Please answer - Workshops / Pasta Products) :)"; break
       case "Workshops": answer = "Great choice, please click Workshops above :)"; break
       case "Pasta Products": answer = "You will not regret about, please click Shop above :)"; break
       case "No": answer = "Then have a nice day and see you next time! :)"; break
@@ -28,11 +28,9 @@ function Chat() {
 
   return (
     <div className="container">
-      <div>
-        <h3 className="chatSubTitleAppearance">Chat</h3>
-      </div>
-      <div className="chatArea">
-        <div className="firstPartofChat">
+      <h3 className="chatSubTitleAppearance">Chat</h3>
+      <div className="row">
+        <div className="col-6">
           <div id='messageTemplate' className="chatBox">
             {messages.map((item, index) => (
               <div key={index} className="chatMessage">
@@ -47,20 +45,19 @@ function Chat() {
             }
           </div>
         </div>
-        <form onSubmit={SubmitMessage}>
-          <div className="row secondPartofChat">
-            <hr />
-            <div className="col-9">
-              <label htmlFor="userName">Username:</label> <br />
-              <input required type="some-name" id="nameChat" /> <br />
-              <label htmlFor="comment">Message:</label><br />
-              <textarea required id="comment"></textarea>
+        <div className="col-6">
+          <form onSubmit={SubmitMessage}>
+            <div className="row secondPartofChat">
+              <div className="col-9">
+                <label htmlFor="userName">Username:</label> <br />
+                <input required type="some-name" id="nameChat" /> <br />
+                <label htmlFor="comment">Message:</label><br />
+                <textarea required id="comment"></textarea>
+                <button className="btn btn-warning responsive-width"><strong>SEND MSG</strong></button>
+              </div>
             </div>
-            <div className="col-3 btnBox">
-              <button className="btn btn-warning responsive-width">Send</button>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   )

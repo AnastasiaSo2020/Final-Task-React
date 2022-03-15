@@ -12,67 +12,25 @@ function Cart(props) {
         <div className="col">
           <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <button
-                class="nav-link tabsAppearance active"
-                id="nav-home-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#nav-home"
-                type="button"
-                role="tab"
-                aria-controls="nav-home"
-                aria-selected="true"
-              >
-                Products
+              <button class="nav-link tabsAppearance active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                <strong>Products</strong>
               </button>
-              <button
-                class="nav-link tabsAppearance"
-                id="nav-address-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#nav-address"
-                type="button"
-                role="tab"
-                aria-controls="nav-address"
-                aria-selected="false"
-              >
-                Address
+              <button class="nav-link tabsAppearance" id="nav-address-tab" data-bs-toggle="tab" data-bs-target="#nav-address" type="button" role="tab" aria-controls="nav-address" aria-selected="false">
+                <strong>Address</strong>
               </button>
-              <button
-                class="nav-link tabsAppearance"
-                id="nav-summary-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#nav-summary"
-                type="button"
-                role="tab"
-                aria-controls="nav-summary"
-                aria-selected="false"
-              >
-                Summary
+              <button class="nav-link tabsAppearance" id="nav-summary-tab" data-bs-toggle="tab" data-bs-target="#nav-summary" type="button" role="tab" aria-controls="nav-summary" aria-selected="false">
+                <strong>Summary</strong>
               </button>
             </div>
           </nav>
           <div className="tab-content" id="nav-tabContent">
-            <div
-              className="tab-pane fade show active"
-              id="nav-home"
-              role="tabpanel"
-              aria-labelledby="nav-home-tab"
-            >
+            <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
               <CartProduct data={props.data} RemoveFromCart={props.RemoveFromCart} />
             </div>
-            <div
-              className="tab-pane fade"
-              id="nav-address"
-              role="tabpanel"
-              aria-labelledby="nav-address-tab"
-            >
+            <div className="tab-pane fade" id="nav-address" role="tabpanel" aria-labelledby="nav-address-tab">
               <CartAddress addAddress={(a) => setAddress(a)} />
             </div>
-            <div
-              className="tab-pane fade"
-              id="nav-summary"
-              role="tabpanel"
-              aria-labelledby="nav-summary-tab"
-            >
+            <div className="tab-pane fade" id="nav-summary" role="tabpanel" aria-labelledby="nav-summary-tab">
               <CartSummary RemoveFromCart={props.RemoveFromCart} address={address} data={props.data} />
               <button className="btn btn-warning cartBuyBtn"><strong>CONTINUE TO CHECKOUT</strong></button>
             </div>

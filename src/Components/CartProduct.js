@@ -35,7 +35,7 @@ function CartProduct(props) {
                                     <td className="price">{item.price} USD</td>
                                     <td>{item.quantity * item.price} USD</td>
                                     <td>
-                                        <button className="btn btn-warning" onClick={() => onDelete(item)}>Remove</button>
+                                        <button className="btn btn-warning" onClick={() => onDelete(item)}><strong>Remove</strong></button>
                                     </td>
                                 </tr>
                             ))}
@@ -45,7 +45,7 @@ function CartProduct(props) {
                 <div className="col-md-12 d-flex justify-content-end">
                     <h4>
                         Total:
-                        <span className="p-1">{props.data.reduce((a, b) => a + b.price * b.quantity, 0)},-</span>
+                        <span className="p-1">{props.data.reduce((a, b) => a + b.price * b.quantity, 0)},- USD</span>
                     </h4>
                 </div>
             </div>
